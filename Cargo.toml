@@ -1,0 +1,17 @@
+[package]
+name = "stm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argh = "0.1.13"
+keyvalues-serde = "0.2.1"
+serde = { version = "1.0.217", features = ["derive"] }
+steamlocate = "2.0.0"
+vdflex = "0.1.1"
+
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
